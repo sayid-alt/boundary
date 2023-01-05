@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+body {
+   height: 100vh;
+}
+
+.container{
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    margin: auto;
+    width: 50%;
+    padding: 20px;
+    background-color: whitesmoke;
+    border-radius: 25px;
+    box-shadow: 2px 4px 8px 0  black;
+}
+
+.box{
+    padding: 15px 0 15px 0;
+}
+
+input{
+    max-width: 50px;
+}
+
+button{
+    background-color: green;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    padding: 15px;
+    color: white;
+    cursor: pointer;
+}

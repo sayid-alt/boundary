@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Penghitung Max Min</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+
+            <form>
+                <div class="box">
+                    <h4 class="title-box">Masukkan persamaan</h4>
+                </div>
+
+                <div class="box box-1">
+                    n_start: <input type="text" id="startValue">
+                    n_end: <input type="text" id="endValue">
+                    batas: <input type="text" id="hValue">
+                </div>
+
+                <div class="box box-2 equation">
+                    <input type="text" id="value1">x^<input type="text" id="pow">
+                    <select id="operator1">
+                        <option value="add">+</option>
+                        <option value="min">-</option>
+                    </select> <input type="text" id="value3">
+                    x <select id="operator2">
+                        <option value="add">+</option>
+                        <option value="min">-</option>
+                    </select>
+                    <input type="text" id="value4"> = 0
+                </div>
+
+                <div class="result">
+                    <p id="max"></p>
+                    <p id="min"></p>
+                </div>
+
+                <button type="button" onclick="calc()">Hitung</button>
+            </form>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
