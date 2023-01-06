@@ -1,14 +1,14 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    box-sizing:border-box;
+    box-sizing: border-box;
 }
 
 body {
-   height: 100vh;
+    height: 100vh;
 }
 
-.container{
+.container {
     position: relative;
     top: 50%;
     transform: translate(0, -50%);
@@ -17,23 +17,31 @@ body {
     padding: 20px;
     background-color: whitesmoke;
     border-radius: 25px;
-    box-shadow: 2px 4px 8px 0  black;
+    box-shadow: 2px 4px 8px 0 black;
+    text-align: center;
 }
 
-.box{
+.box {
     padding: 15px 0 15px 0;
 }
 
-input{
-    max-width: 50px;
+input {
+    width: 2.5em;
 }
 
-button{
-    background-color: green;
+button {
+    background-color: rgb(66, 66, 201);
     border: none;
     border-radius: 5px;
     width: 100%;
     padding: 15px;
     color: white;
     cursor: pointer;
+    margin-top: 2em;
+    transition: all ease 0.3s;
+}
+
+button:hover {
+    background-color: rgb(66, 66, 201);
+    opacity: 0.9;
 }

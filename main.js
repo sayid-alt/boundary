@@ -14,7 +14,9 @@ function calc() {
     let operator1 = document.querySelector('#operator1').value;
     let operator2 = document.querySelector('#operator2').value;
     console.log(operator1, operator2)
+
     const fx = (x) => {
+        
         if ((operator1 == "add")&& (operator2 == "add")){
             calculated = ((constNum1 * x) ** pow) + (constNum3 * x) + constNum4;
         } 
@@ -68,6 +70,10 @@ function calc() {
     result = show_result(startValue, endValue, hValue)
     console.log(result);
     let it = 0;
+
+    let resultX, resultY;
+    const valResultMax = document.querySelector('#max');
+    const valResultMin = document.querySelector('#min');
     while (startValue <= endValue) {
         // console.log('it',it); inrcrease it
 
@@ -80,18 +86,24 @@ function calc() {
         var next = result[it][startValue.toFixed(2)]
         // console.log('next', next)
 
+       
         if (prev * next < 0){
-            const valResultMax = document.querySelector('#max');
-            const valResultMin = document.querySelector('#min');
-            valResultMax.innerHTML = `max: {${startValue.toFixed(2)}, ${result[it][startValue.toFixed(2)]}}`;
-            valResultMin.innerHTML = `min: {${startValue.toFixed(2)}, ${result[it][startValue.toFixed(2)]}}`;
-
-            console.log(startValue.toFixed(2))
-            console.log(result[it][startValue.toFixed(2)])
-        }
-
-
+            resultX = startValue.toFixed(2);
+            resultY = result[it][startValue.toFixed(2)]
+            break;
+            // console.log(startValue.toFixed(2))
+            // console.log(result[it][startValue.toFixed(2)])
+        } 
     }
+
+    if (resultX != 0 || resultY != 0){
+        valResultMax.innerHTML = `max: {${startValue.toFixed(2)}, ${result[it][startValue.toFixed(2)]}}`;
+        valResultMin.innerHTML = `min: {${Math.abs(startValue.toFixed(2))}, ${result[it][startValue.toFixed(2)]}}`;
+    } else {
+        valResultMax.innerHTML = `max: NOT FOUND`;
+        valResultMin.innerHTML = `min: NOT FOUND`;
+    }
+
 
 };
 
