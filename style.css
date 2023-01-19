@@ -4,13 +4,21 @@
     box-sizing: border-box;
 }
 
+.header {
+    padding: 3em;
+}
+
+.header h1 {
+    text-align: center;
+}
+
 body {
     height: 100vh;
 }
 
 .container {
     position: relative;
-    top: 50%;
+    top: 40%;
     transform: translate(0, -50%);
     margin: auto;
     width: 50%;
